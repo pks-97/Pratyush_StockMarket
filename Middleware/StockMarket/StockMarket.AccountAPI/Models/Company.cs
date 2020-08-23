@@ -20,5 +20,12 @@ namespace StockMarket.AccountAPI.Models
         [StringLength(30)]
         public string CEO { get; set; }
         public IEnumerable<StockPrice> StockPrices { get; set; } //Navigation Prop
+        [Required]
+        public string TurnOver { get; set; }
+        [Required]
+        public String Board { get; set; }
+        public string Writeup { get; set; }
+        [Required]
+        public string StockCode { get; set; }
     }
 }

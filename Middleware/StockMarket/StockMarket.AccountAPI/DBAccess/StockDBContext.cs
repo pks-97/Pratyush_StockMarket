@@ -15,7 +15,7 @@ namespace StockMarket.AccountAPI.DBAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-429IF4JL\MSSQLSERVER02;Initial Catalog=StockMarketDB;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-429IF4JL\MSSQLSERVER03;Initial Catalog=tempdb;Integrated Security=True");
         }
     }
 }

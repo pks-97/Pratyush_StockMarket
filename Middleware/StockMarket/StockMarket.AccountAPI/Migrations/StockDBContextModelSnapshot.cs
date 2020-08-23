@@ -25,6 +25,10 @@ namespace StockMarket.AccountAPI.Migrations
                         .HasColumnType("nvarchar(25)")
                         .HasMaxLength(25);
 
+                    b.Property<string>("Board")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CEO")
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
@@ -33,6 +37,17 @@ namespace StockMarket.AccountAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(25)")
                         .HasMaxLength(25);
+
+                    b.Property<string>("StockCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TurnOver")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Writeup")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CompanyCode");
 
