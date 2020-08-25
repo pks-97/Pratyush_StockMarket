@@ -1,0 +1,77 @@
+{
+  "Routes": [
+    {
+      //UserAPI - Find Companies
+      "DownstreamPathTemplate": "/api/User/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 65443
+        }
+      ],
+      "UpstreamPathTemplate": "/{url}"
+    },
+    {
+      //AdminAPI - Manage Companies
+      "DownstreamPathTemplate": "/api/Admin/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 49932
+        }
+      ],
+      "UpstreamPathTemplate": "/Admin/{url}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Admin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 49932
+        }
+      ],
+      "UpstreamPathTemplate": "/Admin"
+    },
+    {
+      //AccountAPI - Manage User Accounts
+      "DownstreamPathTemplate": "/api/Account/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44359
+        }
+      ],
+      "UpstreamPathTemplate": "/Account/{url}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Account",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44359
+        }
+      ],
+      "UpstreamPathTemplate": "/Account"
+    },
+    {
+      //ExcelAPI - Import Spreadsheet
+      "DownstreamPathTemplate": "/api/Excel/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 49393
+        }
+      ],
+      "UpstreamPathTemplate": "/Admin/Excel/{url}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://loaclhost:65283"
+  }
+}

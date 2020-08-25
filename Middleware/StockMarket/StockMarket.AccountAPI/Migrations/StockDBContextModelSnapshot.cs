@@ -54,6 +54,37 @@ namespace StockMarket.AccountAPI.Migrations
                     b.ToTable("Company");
                 });
 
+            modelBuilder.Entity("StockMarket.AccountAPI.Models.IPO", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OpenDataTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PricePerShare")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StockExchange")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalShares")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("IPO");
+                });
+
             modelBuilder.Entity("StockMarket.AccountAPI.Models.StockPrice", b =>
                 {
                     b.Property<int>("RowId")

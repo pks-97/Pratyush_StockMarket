@@ -12,10 +12,12 @@ namespace StockMarket.AdminAPI.DBAccess
         public DbSet<User> Users { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<StockPrice> StockPrices { get; set; }
+        public DbSet<IPO> IPO { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Data Source=LAPTOP-429IF4JL\MSSQLSERVER03;Initial Catalog=tempdb;Integrated Security=True");
+           
         }
     }
 }

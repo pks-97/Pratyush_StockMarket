@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.AccountAPI", "StockMarket.AccountAPI\StockMarket.AccountAPI.csproj", "{C8A82AC3-82C2-4D9E-988A-B1EA56388B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.AccountAPI", "StockMarket.AccountAPI\StockMarket.AccountAPI.csproj", "{C8A82AC3-82C2-4D9E-988A-B1EA56388B44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.UserAPI", "StockMarket.UserAPI\StockMarket.UserAPI.csproj", "{A62FFD7F-4022-4C70-BA60-F35F4B9B7928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.UserAPI", "StockMarket.UserAPI\StockMarket.UserAPI.csproj", "{A62FFD7F-4022-4C70-BA60-F35F4B9B7928}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.AdminAPI", "StockMarket.AdminAPI\StockMarket.AdminAPI.csproj", "{7CCDF0A0-AD2E-4E45-8EBA-EE9C9E93EA47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.AdminAPI", "StockMarket.AdminAPI\StockMarket.AdminAPI.csproj", "{7CCDF0A0-AD2E-4E45-8EBA-EE9C9E93EA47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.ExcelAPI", "StockMarket.ExcelAPI\StockMarket.ExcelAPI.csproj", "{6AA1CB37-D8F7-4336-ABFE-500C5ED3EBF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockMarket.ExcelAPI", "StockMarket.ExcelAPI\StockMarket.ExcelAPI.csproj", "{6AA1CB37-D8F7-4336-ABFE-500C5ED3EBF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarket.GateWay", "StockMarket.GateWay\StockMarket.GateWay.csproj", "{430894E7-9911-41FB-B280-D6ACD3C50F96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6AA1CB37-D8F7-4336-ABFE-500C5ED3EBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AA1CB37-D8F7-4336-ABFE-500C5ED3EBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AA1CB37-D8F7-4336-ABFE-500C5ED3EBF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430894E7-9911-41FB-B280-D6ACD3C50F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430894E7-9911-41FB-B280-D6ACD3C50F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430894E7-9911-41FB-B280-D6ACD3C50F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430894E7-9911-41FB-B280-D6ACD3C50F96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

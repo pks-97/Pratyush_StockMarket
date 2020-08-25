@@ -19,21 +19,42 @@ namespace StockMarket.AdminAPI.Repositories
         }
         public void Add(Company c)
         {
-            context.Add(c);
+            context.Companies.Add(c);
+            context.SaveChanges();
+            //throw new NotImplementedException();
+        }
+
+        public void AddIPO(IPO ipo)
+        {
+            context.IPO.Add(ipo);
+            context.SaveChanges();
+            //throw new NotImplementedException();
+        }
+
+        public void DeleteIPO(IPO ipo)
+        {
+            context.IPO.Remove(ipo);
             context.SaveChanges();
             //throw new NotImplementedException();
         }
 
         public void Delete(Company c)
         {
-            context.Remove(c);
+            context.Companies.Remove(c);
             context.SaveChanges();
             //throw new NotImplementedException();
         }
 
         public void Edit(Company c)
         {
-            context.Update(c);
+            context.Companies.Update(c);
+            context.SaveChanges();
+            //throw new NotImplementedException();
+        }
+
+        public void EditIPO(IPO ipo)
+        {
+            context.IPO.Update(ipo);
             context.SaveChanges();
             //throw new NotImplementedException();
         }

@@ -42,5 +42,24 @@ namespace StockMarket.AdminAPI.Services
         {
             return (ar.Validate(uname, pwd));
         }
+        public void EditIPO(IPO ipo)
+        {
+            ar.EditIPO(ipo);
+            //context.SaveChanges();
+            //throw new NotImplementedException();
+        }
+        public void DeleteIPO(IPO ipo)
+        {
+            ar.DeleteIPO(ipo);
+            //context.SaveChanges();
+            //throw new NotImplementedException();
+        }
+
+        public void AddIPO(IPO ipo)
+        {
+            ar.AddIPO(ipo);
+            //context.SaveChanges();
+            //throw new NotImplementedException();
+        }
     }
 }

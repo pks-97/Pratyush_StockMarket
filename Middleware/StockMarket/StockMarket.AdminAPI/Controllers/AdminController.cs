@@ -68,14 +68,57 @@ namespace StockMarket.AdminAPI.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpPost]
+        [Route("AddIPO")]
+        public IActionResult AddIPO(IPO item)
+        {
+            try
+            {
+                service.AddIPO(item);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
 
         [HttpPost]
+        [Route("DeleteIPO")]
+        public IActionResult DeleteIPO(IPO item)
+        {
+            try
+            {
+                service.DeleteIPO(item);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpPut]
         [Route("EditCompany")]
         public IActionResult Edit(Company item)
         {
             try
             {
                 service.Edit(item);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPut]
+        [Route("EditIPO")]
+        public IActionResult EditIPO(IPO item)
+        {
+            try
+            {
+                service.EditIPO(item);
                 return Ok();
             }
             catch (Exception ex)
