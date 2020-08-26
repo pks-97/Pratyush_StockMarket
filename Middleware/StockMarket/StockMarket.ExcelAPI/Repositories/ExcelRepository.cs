@@ -20,11 +20,11 @@ namespace StockMarket.ExcelAPI.Repositories
         }
         public IList<StockPrice> ExcelHelper(string filePath)
         {
-            FileInfo file = new FileInfo(filePath);
+            FileInfo file = new FileInfo(@filePath);
             string fileName = file.Name;
             using (ExcelPackage package = new ExcelPackage(file))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets["Sheet1"];
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
                 //int totalRows = worksheet.Dimension.Rows;
                 int totalRows = worksheet.Dimension.Rows;
 
@@ -33,11 +33,11 @@ namespace StockMarket.ExcelAPI.Repositories
                 {
                     stockPrices.Add(new StockPrice
                     {
-                        CompanyCode = worksheet.Cells[i, 1].ToString().Trim(),
-                        StockExchange = worksheet.Cells[i, 2].ToString().Trim(),
-                        CurrentPrice = double.Parse(worksheet.Cells[i, 3].ToString().Trim()),
-                        Date = DateTime.Parse(worksheet.Cells[i, 4].ToString().Trim()),
-                        Time = worksheet.Cells[i, 5].ToString().Trim()
+                        CompanyCode = worksheet.Cells[i, 1].Value.ToString().Trim(),
+                        StockExchange = worksheet.Cells[i, 2].Value.ToString().Trim(),
+                        CurrentPrice = double.Parse(worksheet.Cells[i, 3].Value.ToString().Trim()),
+                        Date = DateTime.Parse(worksheet.Cells[i, 4].Value.ToString().Trim()),
+                        Time = worksheet.Cells[i, 5].Value.ToString().Trim()
                     });
                 }
                 context.StockPrices.AddRange(stockPrices);
