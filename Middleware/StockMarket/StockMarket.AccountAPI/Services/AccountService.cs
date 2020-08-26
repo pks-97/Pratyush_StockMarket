@@ -20,6 +20,37 @@ namespace StockMarket.AccountAPI.Services
             //throw new NotImplementedException();
         }
 
+        public User Delete(User item)
+        {
+            User user = rep.Delete(item);
+            return item;
+            //throw new NotImplementedException();
+        }
+
+        public IEnumerable<User> GetAllUsers()
+        {
+            return (rep.GetAllUsers());
+            //throw new NotImplementedException();
+        }
+
+        public User GetUserById(string uid)
+        {
+            return (rep.GetUserById(uid));
+            //throw new NotImplementedException();
+        }
+
+        public bool IsUserName(string uname)
+        {
+            return (rep.IsUserName(uname));
+         //   throw new NotImplementedException();
+        }
+
+        public User Update(User item)
+        {
+            return (rep.Update(item));
+            //throw new NotImplementedException();
+        }
+
         public User Validate(string uname, string pwd)
         {
             return (rep.Validate(uname, pwd));

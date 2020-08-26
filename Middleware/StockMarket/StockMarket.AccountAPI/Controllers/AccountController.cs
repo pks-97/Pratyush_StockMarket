@@ -51,5 +51,90 @@ namespace StockMarket.AccountAPI.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPost]
+        [Route("UpdateUser")]
+        public IActionResult UpdateUser(User item)
+        {
+            try
+            {
+                service.Update(item);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("IsUserName/{username}")]
+        public IActionResult ValidUser(string username)
+        {
+            try
+            {
+                //service.Update(item);
+                if (service.IsUserName(username))
+                {
+                    return Ok("Valid");
+                }
+                else return Ok("InValid");
+                //return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetUser/{uid}")]
+        public IActionResult GetUser(string uid)
+        {
+            try
+            {
+                //service.Update(item);
+                return Ok(service.GetUserById(uid));
+                //return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetAllUsers")]
+        public IActionResult GetAllUsers()
+        {
+            try
+            {
+                return Ok(service.GetAllUsers());
+                //service.Update(item);
+                //return Ok(service.GetUserById(uid));
+                //return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("DeleteUser")]
+        public IActionResult DeleteUser(User user)
+        {
+            try
+            {
+                return Ok(service.Delete(user));
+                //service.Update(item);
+                //return Ok(service.GetUserById(uid));
+                //return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
