@@ -54,13 +54,13 @@ namespace StockMarket.AdminAPI.Controllers
             }
         }
 
-        [HttpPost]
-        [Route("DeleteCompany")]
-        public IActionResult Delete(Company item)
+        [HttpGet]
+        [Route("DeleteCompany/{code}")]
+        public IActionResult Delete(string code)
         {
             try
             {
-                service.Delete(item);
+                service.Delete(code);
                 return Ok();
             }
             catch (Exception ex)
@@ -83,7 +83,7 @@ namespace StockMarket.AdminAPI.Controllers
             }
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("DeleteIPO")]
         public IActionResult DeleteIPO(IPO item)
         {
@@ -137,6 +137,20 @@ namespace StockMarket.AdminAPI.Controllers
                 return Ok(co);
             }
             catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllCompanies")]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                IEnumerable<Company> companies = service.GetAllCompanies();
+                return Ok(companies);
+            }
+            catch(Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }

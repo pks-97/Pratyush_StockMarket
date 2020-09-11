@@ -128,4 +128,9 @@ F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\r
 F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\obj\Debug\netcoreapp3.1\StockMarket.AdminAPI.MvcApplicationPartsAssemblyInfo.cs
 F:\Kinect\StockMarket\StockMarket\StockMarket.AdminAPI\obj\Debug\netcoreapp3.1\StockMarket.AdminAPI.MvcApplicationPartsAssemblyInfo.cache

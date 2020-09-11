@@ -20,9 +20,9 @@ namespace StockMarket.AdminAPI.Services
             //throw new NotImplementedException();
         }
 
-        public void Delete(Company c)
+        public void Delete(string code)
         {
-            ar.Delete(c);
+            ar.Delete(code);
             //throw new NotImplementedException();
         }
 
@@ -60,6 +60,10 @@ namespace StockMarket.AdminAPI.Services
             ar.AddIPO(ipo);
             //context.SaveChanges();
             //throw new NotImplementedException();
+        }
+        public IEnumerable<Company> GetAllCompanies()
+        {
+            return ar.GetAllCompanies();
         }
     }
 }

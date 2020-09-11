@@ -13,6 +13,8 @@ using StockMarket.AdminAPI.Models;
 using StockMarket.AdminAPI.Repositories;
 using StockMarket.AdminAPI.Services;
 using StockMarket.AdminAPI.DBAccess;
+using Microsoft.OpenApi.Models;
+
 namespace StockMarket.AdminAPI
 {
     public class Startup
@@ -31,6 +33,20 @@ namespace StockMarket.AdminAPI
             services.AddTransient<IAdminRepository, AdminRepository>();
             services.AddTransient<IAdminService, AdminService>();
             services.AddControllers();
+            //add cors
+            services.AddCors(c =>
+            {
+                c.AddPolicy("Access-Control-Allow-Origin", options =>
+                 options.AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+                );
+            });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +56,13 @@ namespace StockMarket.AdminAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseRouting();
+            app.UseCors("Access-Control-Allow-Origin");
 
             app.UseAuthorization();
 

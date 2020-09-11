@@ -10,10 +10,11 @@ namespace StockMarket.AdminAPI.Repositories
         public void Add(Company c);
         public void Edit(Company c);
         public Company GetCompanyById(string code);
-        public void Delete(Company c);
+        public void Delete(string code);
         public bool Validate(string uname, string pwd);
         public void EditIPO(IPO ipo);
         public void AddIPO(IPO ipo);
         public void DeleteIPO(IPO ipo);
+        public IEnumerable<Company> GetAllCompanies();
     }
 }

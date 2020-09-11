@@ -16,7 +16,7 @@ namespace StockMarket.ExcelAPI.DBAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(@"Data Source=LAPTOP-429IF4JL\MSSQLSERVER03;Initial Catalog=tempdb;Integrated Security=True");
+            options.UseSqlServer(@"Data Source=LAPTOP-429IF4JL\MSSQLSERVER05;Initial Catalog=tempdb;Integrated Security=True");
            
         }
     }

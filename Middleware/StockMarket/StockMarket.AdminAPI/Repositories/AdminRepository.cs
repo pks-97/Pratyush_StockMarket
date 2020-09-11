@@ -38,8 +38,9 @@ namespace StockMarket.AdminAPI.Repositories
             //throw new NotImplementedException();
         }
 
-        public void Delete(Company c)
+        public void Delete(string code)
         {
+            Company c = context.Companies.Find(code);
             context.Companies.Remove(c);
             context.SaveChanges();
             //throw new NotImplementedException();
@@ -73,6 +74,10 @@ namespace StockMarket.AdminAPI.Repositories
                 return true;
             }
             else return false;
+        }
+        public  IEnumerable<Company> GetAllCompanies()
+        {
+            return context.Companies.ToList();
         }
     }
 }
